@@ -605,6 +605,7 @@ WARNING
           
           run("ln -s /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6 #{yaml_lib}/libsqlite3.so")       # for sqlite3   make symbolic link
           run("cp #{File.expand_path( "../../vendor/sqlite3.h", $PROGRAM_NAME )} #{yaml_include}")   # for sqlite3   prepare sqlite3.h
+          run("cp #{File.expand_path( "../../vendor/sqlite3.h", $PROGRAM_NAME )} /tmp/build/vendor/ruby-2.3.4/include/ruby-2.3.0/x86_64-linux")   # for sqlite3   prepare sqlite3.h
 
           puts "Running: #{bundle_command}"
           instrument "ruby.bundle_install" do
